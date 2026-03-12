@@ -19,20 +19,31 @@ body {
   border: 1px solid #ccc;
 }
 
-/* Image floats */
+/* Main page titles - centered and slightly larger */
+#container > h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 0.5em 0;
+}
+
+#container > h2 {
+  text-align: center;
+  font-size: 2em;
+  margin: 0.25em 0 1em;
+}
+
 .float-left {
   float: left;
   margin: 0 15px 15px 0;
-  width: 200px;
+  width: 250px; /* increased from 200 */
 }
 
 .float-right {
   float: right;
   margin: 0 0 15px 15px;
-  width: 200px;
+  width: 250px; /* increased from 200 */
 }
 
-/* Paragraph classes */
 .paragraph1 {
   margin-bottom: 20px;
 }
@@ -45,13 +56,12 @@ body {
   margin-bottom: 20px;
 }
 
-/* Clearfix for info sections containing floats */
 .info {
-  overflow: auto; /* contain floated children */
+  overflow: auto;
   margin-bottom: 30px;
 }
 
-/* Links styling */
+
 .links a:link {
   color: #0066cc;
   text-decoration: none;
@@ -65,7 +75,6 @@ body {
   text-decoration: underline;
 }
 
-/* Media queries */
 @media screen and (max-width: 1200px) {
   #container {
     max-width: 900px;
@@ -78,12 +87,11 @@ body {
   }
   .float-left,
   .float-right {
-    width: 150px;
+    width: 180px; /* bumped up for better visibility on narrower screens */
   }
 }
 
 @media screen and (max-width: 768px) {
-  /* stack images and remove floats */
   .float-left,
   .float-right {
     float: none;
